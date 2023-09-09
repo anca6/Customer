@@ -229,7 +229,7 @@ MonoBehaviour:
     m_Value: 50
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 500
+    m_Value: 100
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -324,7 +324,7 @@ MonoBehaviour:
   active: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 500
+    m_Value: 50
   directionalTransmissionMultiplier:
     m_OverrideState: 1
     m_Value: 1
