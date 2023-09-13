@@ -9,10 +9,10 @@ public class LockDoor : MonoBehaviour
 
     public float cooldownSeconds = 1;
 
-    bool isClosed = true;
+    public bool isClosed = true;
     bool isLocked = false;
 
-    float nextActionTime; // earliest time where we are able to interact (animation ended)
+    float nextActionTime;
 
 
     private void OnTriggerStay(Collider other)
