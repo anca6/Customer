@@ -7,6 +7,8 @@ TagManager:
   - Window
   - Belonging
   - Alarm
+  - Win
+  - Lose
   layers:
   - Default
   - TransparentFX
