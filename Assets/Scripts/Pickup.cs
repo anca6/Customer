@@ -9,9 +9,6 @@ public class Pickup : MonoBehaviour
 
     public string pickupTag;
 
-   /* public string keyTag = "Key"; //Tag for the key item
-    public string extinguisherTag = "Extinguisher"; //Tag for the extinguisher item*/
-
     private void Update()
     {
         if (interactedWith)
