@@ -9,6 +9,8 @@ public class Interaction : MonoBehaviour
 
     private PlayerControls playerControls;
 
+    public string requiredPickupTag;
+
     void Start()
     {
         playerControls = FindObjectOfType<PlayerControls>();
@@ -16,6 +18,8 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        PlayerInventory playerInventory = collision.gameObject.GetComponent<PlayerInventory>();
+
         //FIRE ALARM
         if (gameObject.CompareTag("Alarm"))
             if (isInteracted == false && Input.GetKey(ActivationKey))
@@ -46,6 +50,20 @@ public class Interaction : MonoBehaviour
                 isInteracted = true;
 
                 Destroy(gameObject);
+            }
+
+        //FIRE OBSTACLE
+        if(gameObject.CompareTag("Obstacle"))
+            if(isInteracted == false && Input.GetKey(ActivationKey))
+            {
+                if(playerInventory.inventory.Contains(requiredPickupTag))
+            {
+                Debug.Log("test fire");
+
+                isInteracted = true;
+
+                Destroy(gameObject);
+            }
             }
 
     }

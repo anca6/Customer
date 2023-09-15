@@ -7,8 +7,7 @@ public class LockDoor : MonoBehaviour
     public KeyCode ActivationKey = KeyCode.E;
     public KeyCode LockKey = KeyCode.X;
 
-    public string keyTag = "Key";
-    public string exinguisherTag = "Extinguisher";
+    public string requiredPickupTag;
 
     public float cooldownSeconds = 1;
 
@@ -51,12 +50,12 @@ public class LockDoor : MonoBehaviour
                 {
                     if (Time.time > nextActionTime)
                     {
-                        if (isClosed && !isLocked && playerInventory.inventory.Contains(keyTag))
+                        if (isClosed && !isLocked && playerInventory.inventory.Contains(requiredPickupTag))
                         {
                             isLocked = true;
                             Debug.Log("Locked!");
                         }
-                        else if (isClosed && isLocked && playerInventory.inventory.Contains(keyTag))
+                        else if (isClosed && isLocked && playerInventory.inventory.Contains(requiredPickupTag))
                         {
                             isLocked = false;
                             Debug.Log("Unlocked!");
