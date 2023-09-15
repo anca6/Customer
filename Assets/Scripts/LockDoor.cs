@@ -7,6 +7,8 @@ public class LockDoor : MonoBehaviour
     public KeyCode ActivationKey = KeyCode.E;
     public KeyCode LockKey = KeyCode.X;
 
+    public string requiredPickupTag;
+
     public float cooldownSeconds = 1;
 
     public bool isClosed = true;
@@ -19,46 +21,51 @@ public class LockDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKey(ActivationKey))
+            PlayerInventory playerInventory = other.gameObject.GetComponent<PlayerInventory>();
+
+                if (Input.GetKey(ActivationKey))
+                {
+                    if (Time.time > nextActionTime)
+                    {
+                        if (isClosed && !isLocked)
+                        {
+                            isClosed = false;
+                            Debug.Log("Open");
+                        }
+                        else if (!isClosed)
+                        {
+                            isClosed = true;
+                            Debug.Log("Closed");
+                        }
+                        nextActionTime = Time.time + cooldownSeconds;
+                    }
+                    else
+                    {
+                        //Debug.Log("DENIED!");
+                    }
+                }
+            if (playerInventory != null)
             {
-                if (Time.time > nextActionTime)
+                if (Input.GetKey(LockKey))
                 {
-                    if (isClosed && !isLocked)
+                    if (Time.time > nextActionTime)
                     {
-                        isClosed = false;
-                        Debug.Log("Open");
+                        if (isClosed && !isLocked && playerInventory.inventory.Contains(requiredPickupTag))
+                        {
+                            isLocked = true;
+                            Debug.Log("Locked!");
+                        }
+                        else if (isClosed && isLocked && playerInventory.inventory.Contains(requiredPickupTag))
+                        {
+                            isLocked = false;
+                            Debug.Log("Unlocked!");
+                        }
+                        nextActionTime = Time.time + cooldownSeconds;
                     }
-                    else if (!isClosed)
+                    else
                     {
-                        isClosed = true;
-                        Debug.Log("Closed");
+                        //Debug.Log("DENIED!");
                     }
-                    nextActionTime = Time.time + cooldownSeconds;
-                }
-                else
-                {
-                    //Debug.Log("DENIED!");
-                }
-            }
-            if (Input.GetKey(LockKey))
-            {
-                if (Time.time > nextActionTime)
-                {
-                    if (isClosed && !isLocked)
-                    {
-                        isLocked = true;
-                        Debug.Log("Locked!");
-                    }
-                    else if (isClosed && isLocked)
-                    {
-                        isLocked = false;
-                        Debug.Log("Unlocked!");
-                    }
-                    nextActionTime = Time.time + cooldownSeconds;
-                }
-                else
-                {
-                    //Debug.Log("DENIED!");
                 }
             }
         }
