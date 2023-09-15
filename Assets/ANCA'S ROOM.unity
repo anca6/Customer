@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 789.09863, g: 523.54004, b: 382.7251, a: 1}
+  m_IndirectSpecularColor: {r: 788.9155, g: 523.27686, b: 382.58252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16358,6 +16358,7 @@ GameObject:
   - component: {fileID: 393354864}
   - component: {fileID: 393354863}
   - component: {fileID: 393354868}
+  - component: {fileID: 393354869}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -16475,6 +16476,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   maxCarryAmount: 10
+--- !u!114 &393354869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393354862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26072d0b498941042805fa2e31a5681b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory:
+  - Key
+  - Extinguisher
 --- !u!1 &402791660
 GameObject:
   m_ObjectHideFlags: 0
@@ -16704,6 +16720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  keyTag: Key
+  extinguisherTag: Extinguisher
 --- !u!1 &450074525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: db3cc6b5f6b0df04abc912112d070642,
@@ -16931,6 +16949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   LockKey: 120
+  keyTag: Key
+  exinguisherTag: Extinguisher
   cooldownSeconds: 1
   isClosed: 1
 --- !u!114 &487221042
@@ -22762,6 +22782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   LockKey: 120
+  keyTag: Key
+  exinguisherTag: Extinguisher
   cooldownSeconds: 1
   isClosed: 1
 --- !u!1 &808597889
@@ -30095,6 +30117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   LockKey: 120
+  keyTag: Key
+  exinguisherTag: Extinguisher
   cooldownSeconds: 1
   isClosed: 0
 --- !u!1 &1320170144
@@ -37077,6 +37101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   LockKey: 120
+  keyTag: Key
+  exinguisherTag: Extinguisher
   cooldownSeconds: 1
   isClosed: 1
 --- !u!1 &1831659614
@@ -57923,6 +57949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   LockKey: 120
+  keyTag: Key
+  exinguisherTag: Extinguisher
   cooldownSeconds: 1
   isClosed: 1
 --- !u!1001 &2117909436

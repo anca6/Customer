@@ -8,7 +8,7 @@ public class Pickup : MonoBehaviour
     public KeyCode ActivationKey = KeyCode.E;
 
     public string keyTag = "Key"; //Tag for the key item
-    public string exinguisherTag = "Extinguisher"; //Tag for the extinguisher item
+    public string extinguisherTag = "Extinguisher"; //Tag for the extinguisher item
 
     private void Update()
     {
@@ -30,7 +30,7 @@ public class Pickup : MonoBehaviour
                 Debug.Log("Key grabbed");
             }
 
-            if (playerInventory != null && playerInventory.inventory.Contains(keyTag))
+            if (playerInventory != null && playerInventory.inventory.Contains(extinguisherTag))
             {
                 interactedWith = true;
 
