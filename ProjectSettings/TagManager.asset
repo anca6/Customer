@@ -9,6 +9,7 @@ TagManager:
   - Alarm
   - Win
   - Lose
+  - Key
   layers:
   - Default
   - TransparentFX

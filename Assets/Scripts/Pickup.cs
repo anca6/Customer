@@ -7,6 +7,9 @@ public class Pickup : MonoBehaviour
     private bool interactedWith = false;
     public KeyCode ActivationKey = KeyCode.E;
 
+    public string keyTag = "Key"; //Tag for the key item
+    public string exinguisherTag = "Extinguisher"; //Tag for the extinguisher item
+
     private void Update()
     {
         if (interactedWith)
@@ -19,9 +22,21 @@ public class Pickup : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player") && Input.GetKey(ActivationKey))
         {
-            interactedWith = true;
+            PlayerInventory playerInventory = collision.gameObject.GetComponent<PlayerInventory>();
+            if(playerInventory != null && playerInventory.inventory.Contains(keyTag))
+            {
+                interactedWith = true;
 
-            Debug.Log("Grabbed");
+                Debug.Log("Key grabbed");
+            }
+
+            if (playerInventory != null && playerInventory.inventory.Contains(keyTag))
+            {
+                interactedWith = true;
+
+                Debug.Log("Extnguisher grabbed");
+            }
+
         }
     }
 }
