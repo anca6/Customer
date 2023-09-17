@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 788.93164, g: 523.86816, b: 383.62158, a: 1}
+  m_IndirectSpecularColor: {r: 788.92725, g: 523.2754, b: 382.58252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5822,7 +5822,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817072206}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 104.32841, y: 202.91286, z: 14.1}
@@ -17108,7 +17108,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.14, y: -0.03, z: 0.14}
+  m_Size: {x: 0.14, y: 0.03, z: 0.14}
   m_Center: {x: 0.029415665, y: 0.0015023773, z: -0.018914351}
 --- !u!114 &406530498
 MonoBehaviour:
@@ -17448,6 +17448,13 @@ MonoBehaviour:
   requiredPickupTag: Key
   cooldownSeconds: 1
   isClosed: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 0}
 --- !u!114 &487221042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24027,6 +24034,13 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 0}
 --- !u!1001 &781122682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24260,6 +24274,13 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 0}
 --- !u!114 &781122688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32244,6 +32265,13 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 0
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 0}
 --- !u!1 &1320170144
 GameObject:
   m_ObjectHideFlags: 0
@@ -40191,6 +40219,13 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 0}
 --- !u!1 &1817072204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3332788904514746529, guid: 2b319dd44e399b441b795fcecd5afa7e,
@@ -40254,6 +40289,13 @@ MonoBehaviour:
   requiredPickupTag: Key
   cooldownSeconds: 1
   isClosed: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 1222158028}
 --- !u!64 &1817072211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -51867,8 +51909,53 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 82d7533c6881b214990741fc35611916, type: 2}
     - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 871.10455
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -1.3939695
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -134.08961
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999962
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.008473501
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000016093251
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0020913698
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.971
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: -2350157030448793157, guid: 2b319dd44e399b441b795fcecd5afa7e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: -1773240607779279117, guid: 2b319dd44e399b441b795fcecd5afa7e,
         type: 3}
@@ -61965,6 +62052,13 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  onDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
+  doorAnimation: {fileID: 0}
 --- !u!1001 &2117909436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64200,7 +64294,7 @@ PrefabInstance:
     - target: {fileID: 3882389055571649807, guid: 50422bdb9c4124f4493a227ce47ac20d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7452822
+      value: -2.76
       objectReference: {fileID: 0}
     - target: {fileID: 3882389055571649807, guid: 50422bdb9c4124f4493a227ce47ac20d,
         type: 3}
@@ -64210,7 +64304,7 @@ PrefabInstance:
     - target: {fileID: 3882389055571649807, guid: 50422bdb9c4124f4493a227ce47ac20d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.012989
+      value: 21.74
       objectReference: {fileID: 0}
     - target: {fileID: 3882389055571649807, guid: 50422bdb9c4124f4493a227ce47ac20d,
         type: 3}
@@ -64251,6 +64345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882389055571649811, guid: 50422bdb9c4124f4493a227ce47ac20d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50422bdb9c4124f4493a227ce47ac20d, type: 3}

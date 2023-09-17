@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LockDoor : MonoBehaviour
 {
@@ -16,12 +17,17 @@ public class LockDoor : MonoBehaviour
 
     float nextActionTime;
 
+    public UnityEvent onDoorOpen;
+    public UnityEvent onDoorClose;
 
-    private void OnTriggerStay(Collider other)
+    public Animation doorAnimation;
+
+
+    private void OnCollisionStay(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerInventory playerInventory = other.gameObject.GetComponent<PlayerInventory>();
+            PlayerInventory playerInventory = collision.gameObject.GetComponent<PlayerInventory>();
 
                 if (Input.GetKey(ActivationKey))
                 {
@@ -31,11 +37,21 @@ public class LockDoor : MonoBehaviour
                         {
                             isClosed = false;
                             Debug.Log("Open");
+
+                        //trigger open animation
+                        doorAnimation.Open();
+
+                            onDoorOpen.Invoke();
                         }
                         else if (!isClosed)
                         {
                             isClosed = true;
                             Debug.Log("Closed");
+
+                        //trigger close animation
+                        doorAnimation.Close();
+
+                            onDoorClose.Invoke();
                         }
                         nextActionTime = Time.time + cooldownSeconds;
                     }
