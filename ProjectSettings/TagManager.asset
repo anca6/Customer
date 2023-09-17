@@ -9,6 +9,9 @@ TagManager:
   - Alarm
   - Win
   - Lose
+  - Key
+  - Extinguisher
+  - Obstacle
   layers:
   - Default
   - TransparentFX
