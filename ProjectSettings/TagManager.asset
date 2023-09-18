@@ -12,6 +12,8 @@ TagManager:
   - Key
   - Extinguisher
   - Obstacle
+  - OfficeTrigger
+  - HallwayTrigger
   layers:
   - Default
   - TransparentFX
