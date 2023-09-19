@@ -157,8 +157,6 @@ GameObject:
   - component: {fileID: 3882389056425190025}
   - component: {fileID: 3882389056425190024}
   - component: {fileID: 3882389056425190031}
-  - component: {fileID: 3882389056425190027}
-  - component: {fileID: 3882389056425190020}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -357,31 +355,3 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!114 &3882389056425190027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3882389056425190030}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b377fef2d760f54c97e4876ed0ac726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  character: {fileID: 3882389056425190030}
---- !u!114 &3882389056425190020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3882389056425190030}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c627e1e984448d5459974b7a814a2ec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSpeed: 0.5
-  maxYAngle: 60

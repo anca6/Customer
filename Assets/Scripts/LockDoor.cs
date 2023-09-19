@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class LockDoor : MonoBehaviour
 {
@@ -16,9 +15,6 @@ public class LockDoor : MonoBehaviour
     bool isLocked = false;
 
     float nextActionTime;
-
-    public UnityEvent onDoorOpen;
-    public UnityEvent onDoorClose;
 
     public Animation doorAnimation;
 
@@ -41,7 +37,6 @@ public class LockDoor : MonoBehaviour
                         //trigger open animation
                         doorAnimation.Open();
 
-                            onDoorOpen.Invoke();
                         }
                         else if (!isClosed)
                         {
@@ -51,7 +46,6 @@ public class LockDoor : MonoBehaviour
                         //trigger close animation
                         doorAnimation.Close();
 
-                            onDoorClose.Invoke();
                         }
                         nextActionTime = Time.time + cooldownSeconds;
                     }
