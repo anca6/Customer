@@ -33,7 +33,7 @@ public class Pickup : MonoBehaviour
                 interactedWith = true; // interacted is set to true
 
                 Debug.Log(pickupTag + " grabbed"); // writes in the console which object was picked up
-            if (IO = null)
+            if (IO == null)
          
             {
                 Debug.LogWarning("no interaction object");

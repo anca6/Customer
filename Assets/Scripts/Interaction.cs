@@ -36,12 +36,12 @@ public class Interaction : MonoBehaviour
                 isInteracted = true; // so the player can only interact with it once
                 ScoreManager.Instance.ChangeScore(scoreChange); // adds value to the big score variable
 
-                if (IO != null)
+                if (IO == null)
                 {
                     Debug.LogWarning("no interaction object");
                     return;
                 }
-                if (Audio = null)
+                if (Audio == null)
 
                 {
                     Debug.LogWarning("no interaction audio");
