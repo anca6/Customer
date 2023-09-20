@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class EndScreen : MonoBehaviour
 {
+    //temporary win + lose screens
     public GameObject winPanel; 
     public GameObject losePanel; 
 

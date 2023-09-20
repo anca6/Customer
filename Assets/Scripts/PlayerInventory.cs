@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public List<string> inventory = new List<string>(); //Create the list 
+    public List<string> inventory = new List<string>(); //create the list 
    
-    //Adding items to the inventory
+    //adding items to the inventory
     public void AddToInventory(string itemTag)
     {
         inventory.Add(itemTag);
     }
 
-    //Removing items from the inventory
+    //removing items from the inventory
     public void RemoveFromInventory(string itemTag)
     {
         inventory.Remove(itemTag);
     }
 
-    //Checking if the player has that specific item
+    //checking if the player has that specific item
     public bool HasItem(string itemTag)
     {
         return inventory.Contains(itemTag);
