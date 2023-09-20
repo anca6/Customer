@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 788.92725, g: 523.27295, b: 382.58203, a: 1}
+  m_IndirectSpecularColor: {r: 789.15674, g: 523.41846, b: 382.5879, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21053,6 +21053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   requiredPickupTag: Extinguisher
+  scoreChange: 1
+  increaseScore: 1
 --- !u!1 &555331355
 GameObject:
   m_ObjectHideFlags: 0
@@ -28865,6 +28867,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doors
       objectReference: {fileID: 0}
+    - target: {fileID: 7059809190512426794, guid: 521bfca230778254982e4c681b49d92c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777637560744190287, guid: 521bfca230778254982e4c681b49d92c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521bfca230778254982e4c681b49d92c, type: 3}
 --- !u!1 &770098998 stripped
@@ -29265,6 +29277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   requiredPickupTag: 
+  scoreChange: 1
+  increaseScore: 1
 --- !u!65 &781122689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29276,26 +29290,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 79.24583, y: 240.89766, z: 251.39001}
-  m_Center: {x: -24.487368, y: -5.2283525, z: -0.7189855}
---- !u!114 &781122693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781122685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90132afa93caf547a24c6ab2a334434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActivationKey: 101
-  LockKey: 120
-  requiredPickupTag: 
-  cooldownSeconds: 1
-  isClosed: 1
-  doorAnimation: {fileID: 0}
+  m_Size: {x: 100.61432, y: 240.89766, z: 251.39001}
+  m_Center: {x: -35.171608, y: -5.2283525, z: -0.7189849}
 --- !u!114 &781122694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29312,6 +29308,8 @@ MonoBehaviour:
   animators:
   - {fileID: 157279679}
   - {fileID: 1768047477}
+  scoreChange: 1
+  increaseScore: 1
 --- !u!1 &785897712
 GameObject:
   m_ObjectHideFlags: 0
@@ -29808,6 +29806,65 @@ Transform:
   m_Father: {fileID: 543450652547174214}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &825280150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825280152}
+  - component: {fileID: 825280151}
+  - component: {fileID: 825280153}
+  m_Layer: 0
+  m_Name: Score Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &825280151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825280150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c0db7fe42ca644bbc67ffbf4a204ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore: 0
+--- !u!4 &825280152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825280150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.099086, y: 2.9380813, z: 15.329773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &825280153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825280150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c0db7fe42ca644bbc67ffbf4a204ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore: 0
 --- !u!1001 &827376211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31170,6 +31227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   requiredPickupTag: Extinguisher
+  scoreChange: 1
+  increaseScore: 1
 --- !u!1 &948240749
 GameObject:
   m_ObjectHideFlags: 0
@@ -50417,6 +50476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   requiredPickupTag: 
+  scoreChange: 1
+  increaseScore: 1
 --- !u!1 &1834440002
 GameObject:
   m_ObjectHideFlags: 0
@@ -73198,6 +73259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   requiredPickupTag: 
+  scoreChange: 1
+  increaseScore: 1
 --- !u!114 &2102726472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75651,7 +75714,7 @@ PrefabInstance:
     - target: {fileID: 3882389055571649807, guid: 50422bdb9c4124f4493a227ce47ac20d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9300002
+      value: -4.14
       objectReference: {fileID: 0}
     - target: {fileID: 3882389055571649807, guid: 50422bdb9c4124f4493a227ce47ac20d,
         type: 3}
@@ -76362,6 +76425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   requiredPickupTag: 
+  scoreChange: 1
+  increaseScore: 1
 --- !u!33 &6047566830727702464
 MeshFilter:
   m_ObjectHideFlags: 0

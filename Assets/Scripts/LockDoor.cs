@@ -18,6 +18,11 @@ public class LockDoor : MonoBehaviour
 
     public Animation doorAnimation;
 
+    bool closeScore = false;
+    bool lockScore = false;
+
+    public int scoreChange = 1;
+
 
     private void OnCollisionStay(Collision collision)
     {
@@ -45,6 +50,7 @@ public class LockDoor : MonoBehaviour
 
                         //trigger close animation
                         doorAnimation.Close();
+                        ScoreManager.Instance.ChangeScore(scoreChange);
 
                     }
                     nextActionTime = Time.time + cooldownSeconds;
@@ -64,6 +70,8 @@ public class LockDoor : MonoBehaviour
                         {
                             isLocked = true;
                             Debug.Log("Locked!");
+                            lockScore = true;
+                            ScoreManager.Instance.ChangeScore(-scoreChange);
                         }
                         else if (isClosed && isLocked && playerInventory.inventory.Contains(requiredPickupTag))
                         {
@@ -79,6 +87,7 @@ public class LockDoor : MonoBehaviour
                 }
             }
         }
+        ScoreManager.Instance.GetScore();
         buttonPressed = false;
     }
 
@@ -87,7 +96,7 @@ public class LockDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if() buttonPressed = true;
+        
 
     }
 }
