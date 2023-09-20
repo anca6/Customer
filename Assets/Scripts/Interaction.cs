@@ -11,6 +11,9 @@ public class Interaction : MonoBehaviour
 
     public string requiredPickupTag;
 
+    public int scoreChange = 1;
+    public bool increaseScore = true;
+
     void Start()
     {
         playerControls = FindObjectOfType<PlayerControls>();
@@ -28,6 +31,8 @@ public class Interaction : MonoBehaviour
                 //TO DO: add audio effect
                 //TO DO: deactivate glowy mesh?
                 isInteracted = true;
+                ScoreManager.Instance.ChangeScore(scoreChange);
+                
             }
 
         //WINDOW

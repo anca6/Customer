@@ -7,15 +7,11 @@ public class OpenWindows : MonoBehaviour
     public string boolTriggerName = "Open";
     public Animator[] animators;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int scoreChange = 1;
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -32,7 +28,19 @@ public class OpenWindows : MonoBehaviour
                 {
                     anim.SetBool(boolTriggerName, !currentState); // toggle all
                 }
+
+                if(currentState == true)
+                {
+                    ScoreManager.Instance.ChangeScore(-scoreChange);
+                }
+
+                else if(currentState == false)
+                {
+                    ScoreManager.Instance.ChangeScore(scoreChange);
+                }
             }
+            ScoreManager.Instance.GetScore();
         }
     }
+    
 }
