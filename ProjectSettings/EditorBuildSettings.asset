@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Fernando's stuff/Level.unity
     guid: 9046fe24a1cdf7f49bf220c29a272df3
+  - enabled: 1
+    path: Assets/Fernando's stuff/Fernando's Room.unity
+    guid: 685c386771fc2ae438d272f678aa767b
   m_configObjects: {}

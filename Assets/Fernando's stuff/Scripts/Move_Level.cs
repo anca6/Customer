@@ -6,6 +6,7 @@ public class Move_Level : MonoBehaviour
 {
 
     public RectTransform levels;
+    public GameObject start;
     float movingVariable = 0;
 
     // Start is called before the first frame update
@@ -25,11 +26,23 @@ public class Move_Level : MonoBehaviour
 
         }
 
-        if (movingVariable <= 0)
+        if (movingVariable < 0)
         {
 
            
             MoveRight();
+
+        }
+
+        if(movingVariable == 0)
+        {
+
+            start.SetActive(true);
+
+        }else
+        {
+
+            start.SetActive(false);
 
         }
 
