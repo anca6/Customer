@@ -6,6 +6,7 @@ public class OpenWindows : MonoBehaviour
 {
     public string boolTriggerName = "Open";
     public Animator[] animators;
+    public GameObject InteractionIndicator;
 
     public int scoreChange = 1;
 
@@ -22,6 +23,13 @@ public class OpenWindows : MonoBehaviour
                 }
                 // open all
                 bool currentState = animators[0].GetBool(boolTriggerName);
+                //destroys indicator
+                if (InteractionIndicator != null)
+                {
+                    Debug.LogWarning("OBJECT HAS NO INTERACTION INDICATOR ASSIGHNED ");
+                    return;
+                }
+                Destroy(InteractionIndicator);
 
                 // type   varname  collectionname
                 foreach (Animator anim in animators)
