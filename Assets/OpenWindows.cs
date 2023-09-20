@@ -9,8 +9,6 @@ public class OpenWindows : MonoBehaviour
 
     public int scoreChange = 1;
 
-    public GameObject InteractionIndicator;
-
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -25,7 +23,6 @@ public class OpenWindows : MonoBehaviour
                 // open all
                 bool currentState = animators[0].GetBool(boolTriggerName);
 
-             
                 // type   varname  collectionname
                 foreach (Animator anim in animators)
                 {
@@ -41,15 +38,6 @@ public class OpenWindows : MonoBehaviour
                 {
                     ScoreManager.Instance.ChangeScore(scoreChange);
                 }
-
-                //destroy interaction indicator or if there is none then return
-                if (InteractionIndicator == null)
-                {
-                    Debug.LogWarning("no interact indicator selected in " + gameObject.name);
-                    return;
-                }
-
-                Destroy(InteractionIndicator);
             }
             ScoreManager.Instance.GetScore();
         }
