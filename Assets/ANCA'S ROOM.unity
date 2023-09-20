@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 789.15674, g: 523.41504, b: 382.58984, a: 1}
+  m_IndirectSpecularColor: {r: 788.91943, g: 523.27295, b: 382.58203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29124,11 +29124,6 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7553329697243428148, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 234de9bd82345de469db59ae43179573, type: 2}
     - target: {fileID: -6520369724356402922, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -29159,21 +29154,11 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -1689712852240652059, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
     - target: {fileID: -1672994512437284759, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -1672994512437284759, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
     - target: {fileID: 919132149155446097, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_Name
@@ -29184,31 +29169,16 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3323625287575964850, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
     - target: {fileID: 4837681051017404669, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837681051017404669, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
-    - target: {fileID: 5549224654221963011, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5549224654221963011, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6726601020307892574, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -29234,11 +29204,6 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7580935228730590397, guid: 130a4ef2ba3bec246bb77650c3ab8479,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 234de9bd82345de469db59ae43179573, type: 2}
     - target: {fileID: 8231453413395252562, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_LocalRotation.w
