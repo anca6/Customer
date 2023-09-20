@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 789.4238, g: 523.688, b: 382.77783, a: 1}
+  m_IndirectSpecularColor: {r: 789.15674, g: 523.41504, b: 382.58984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8516,26 +8516,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287417768}
   m_Mesh: {fileID: -7087271138916236341, guid: 06185648f1174334b874a5ce319aa025, type: 3}
---- !u!1 &287651900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5034001266986536474, guid: cce5ab3a9b6751843a58cad5ec7826e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 853996140}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &287651904
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287651900}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4091301307740055229, guid: cce5ab3a9b6751843a58cad5ec7826e1, type: 3}
 --- !u!1 &294157541
 GameObject:
   m_ObjectHideFlags: 0
@@ -29148,7 +29128,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
+      objectReference: {fileID: 2100000, guid: 234de9bd82345de469db59ae43179573, type: 2}
     - target: {fileID: -6520369724356402922, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -29258,7 +29238,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0e45a31270effc64ea6e61a837f88a76, type: 2}
+      objectReference: {fileID: 2100000, guid: 234de9bd82345de469db59ae43179573, type: 2}
     - target: {fileID: 8231453413395252562, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -32297,26 +32277,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf322e1d71936c458375a7de897b2db, type: 3}
---- !u!1 &1019114821 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5711052370896006010, guid: cce5ab3a9b6751843a58cad5ec7826e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 853996140}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1019114825
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019114821}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7513297493162946847, guid: cce5ab3a9b6751843a58cad5ec7826e1, type: 3}
 --- !u!1 &1039268178
 GameObject:
   m_ObjectHideFlags: 0
