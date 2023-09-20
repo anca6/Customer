@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 788.85156, g: 523.23535, b: 382.55762, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21279,7 +21279,6 @@ MonoBehaviour:
   ActivationKey: 101
   requiredPickupTag: Extinguisher
   scoreChange: 1
-  increaseScore: 1
 --- !u!1 &555331355
 GameObject:
   m_ObjectHideFlags: 0
@@ -29638,7 +29637,6 @@ MonoBehaviour:
   ActivationKey: 101
   requiredPickupTag: 
   scoreChange: 1
-  increaseScore: 1
 --- !u!65 &781122689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31622,7 +31620,6 @@ MonoBehaviour:
   ActivationKey: 101
   requiredPickupTag: Extinguisher
   scoreChange: 1
-  increaseScore: 1
 --- !u!1 &948240749
 GameObject:
   m_ObjectHideFlags: 0
@@ -39256,7 +39253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1191316396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51081,7 +51078,6 @@ MonoBehaviour:
   ActivationKey: 101
   requiredPickupTag: 
   scoreChange: 1
-  increaseScore: 1
 --- !u!1 &1834440002
 GameObject:
   m_ObjectHideFlags: 0
@@ -74074,7 +74070,6 @@ MonoBehaviour:
   ActivationKey: 101
   requiredPickupTag: 
   scoreChange: 1
-  increaseScore: 1
 --- !u!114 &2102726472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77241,7 +77236,6 @@ MonoBehaviour:
   ActivationKey: 101
   requiredPickupTag: 
   scoreChange: 1
-  increaseScore: 1
 --- !u!33 &6047566830727702464
 MeshFilter:
   m_ObjectHideFlags: 0

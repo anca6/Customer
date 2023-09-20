@@ -66,10 +66,11 @@ public class Interaction : MonoBehaviour
                 Debug.Log("test fire");
 
                 isInteracted = true;
+                    ScoreManager.Instance.ChangeScore(scoreChange);
 
                 Destroy(gameObject); // we destroy the obstacle so the player can access the exit door
             }
             }
-
+        ScoreManager.Instance.GetScore();
     }
 }

@@ -21,10 +21,8 @@ public class LockDoor : MonoBehaviour
     public int scoreChange = 1; // score value that changes score
 
     // reward system checks
-    bool openScore;
-    bool closeScore;
-    bool lockScore;
-    bool unlockScore;
+    bool wasClosed = true;
+    bool wasLocked = false;
 
 
     private void OnCollisionStay(Collision collision)
@@ -40,22 +38,22 @@ public class LockDoor : MonoBehaviour
                     if (isClosed && !isLocked) // pretty self explanatory
                     {
                         isClosed = false; // the door is open
-                        Debug.Log("Open");
+                        //Debug.Log("Open");
 
                         //trigger open animation
                         doorAnimation.Open();
-                        openScore = true; // for reward system
+                        
                     }
 
                     else if (!isClosed)
                     {
                         isClosed = true; // the door is closed
-                        Debug.Log("Closed");
+                        //Debug.Log("Closed");
 
                         //trigger close animation
                         doorAnimation.Close();
-                        closeScore = true;
-                        //ScoreManager.Instance.ChangeScore(scoreChange);
+                       
+                       
 
                     }
                     nextActionTime = Time.time + cooldownSeconds; // sets the time the player can acivate anything with the keys
@@ -64,16 +62,7 @@ public class LockDoor : MonoBehaviour
                 {
                     //Debug.Log("DENIED!");
                 }
-
-                //IN PROGRESS
-                if (closeScore && unlockScore)
-                {
-                    ScoreManager.Instance.ChangeScore(scoreChange);
-                }
-                /*else if (openScore)
-                {
-                    ScoreManager.Instance.ChangeScore(-scoreChange);
-                }*/
+                CalculateScore();
             }
             if (playerInventory != null) // if the player has picked up objects in the inventory
             {
@@ -85,13 +74,19 @@ public class LockDoor : MonoBehaviour
                         {
                             isLocked = true; // door is locked
                             Debug.Log("Locked!");
-                            lockScore = true; // for reward system
+
+                            wasClosed = isClosed;
+                            wasLocked = isLocked;
                         }
                         else if (isClosed && isLocked && playerInventory.inventory.Contains(requiredPickupTag)) // if the door is closed, locked and they have the key
                         {
                             isLocked = false; // door is unlocked
                             Debug.Log("Unlocked!");
-                            unlockScore = true; // for reward system
+
+                            wasClosed = isClosed;
+                            wasLocked = isLocked;
+
+                         
                         }
                         nextActionTime = Time.time + cooldownSeconds; // sets the time the player can acivate anything with the keys
                     }
@@ -101,18 +96,43 @@ public class LockDoor : MonoBehaviour
                     }
                 }
             }
-            /*if(closeScore && unlockScore)
-            {
-                ScoreManager.Instance.ChangeScore(scoreChange);
-            }
-            else if (openScore)
-            {
-                ScoreManager.Instance.ChangeScore(-scoreChange);
-            }*/
+            
+       
         }
-        ScoreManager.Instance.GetScore(); // gets the big score variable
+
         //buttonPressed = false; // dw about this
     }
+
+    private void CalculateScore()
+    {
+        // Calculate the score change based on the final door state and whether it was locked or unlocked
+        int scoreChange = 0;
+
+        if (wasClosed && !wasLocked)
+        {
+            //Debug.Log("was closed and unlocked");
+            // Door was open and unlocked, change score by -1
+            scoreChange = 1;
+        }
+        else if (!wasClosed || wasLocked)
+        {
+            // Door was closed, change score by +1
+            scoreChange = -1;
+        }
+
+        else if (wasClosed)
+        {
+            Debug.Log("test closed star");
+            scoreChange = 1;
+        }
+
+        // Change the score using the ScoreManager
+        ScoreManager.Instance.ChangeScore(scoreChange);
+        ScoreManager.Instance.GetScore();
+        //Debug.Log(ScoreManager.Instance.GetScore());
+    }
+
+
 
     //bool buttonPressed = false; // dw about this
 
