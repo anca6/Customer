@@ -15,6 +15,7 @@ public class Interaction : MonoBehaviour
     //public bool increaseScore = true; 
 
     public GameObject IO; //InteractionObject
+    public GameObject Audio;
 
     void Start()
     {
@@ -40,6 +41,13 @@ public class Interaction : MonoBehaviour
                     Debug.LogWarning("no interaction object");
                     return;
                 }
+                if (Audio = null)
+
+                {
+                    Debug.LogWarning("no interaction audio");
+                    return;
+                }
+                Audio.SetActive(true);
                 Destroy(IO);
             }
 

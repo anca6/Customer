@@ -25,6 +25,7 @@ public class LockDoor : MonoBehaviour
     bool closeScore;
     bool lockScore;
     bool unlockScore;
+    public GameObject Audio;
 
 
     private void OnCollisionStay(Collision collision)
@@ -45,6 +46,14 @@ public class LockDoor : MonoBehaviour
                         //trigger open animation
                         doorAnimation.Open();
                         openScore = true; // for reward system
+
+                        if (Audio == null)
+
+                        {
+                            Debug.LogWarning("no interaction audio");
+                            return;
+                        }
+                        Audio.SetActive(true);
                     }
 
                     else if (!isClosed)

@@ -10,6 +10,7 @@ public class OpenWindows : MonoBehaviour
     public int scoreChange = 1; // for reward system
 
     public GameObject IO; //InteractionObject
+    public GameObject Audio;
 
     private void OnTriggerStay(Collider other)
     {
@@ -41,12 +42,20 @@ public class OpenWindows : MonoBehaviour
                 {
                     ScoreManager.Instance.ChangeScore(scoreChange); // score: +1
                 }
+                if (Audio == null)
 
-                if (IO != null)
+                {
+                    Debug.LogWarning("no interaction audio");
+                    return;
+                }
+                Audio.SetActive(true);
+
+                if (IO == null)
                 {
                     Debug.LogWarning("no interaction object");
                     return;
                 }
+            
                 Destroy(IO);
             }
             ScoreManager.Instance.GetScore(); // gets the final score
