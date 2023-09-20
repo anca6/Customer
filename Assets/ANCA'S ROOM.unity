@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 788.91943, g: 523.27295, b: 382.58203, a: 1}
+  m_IndirectSpecularColor: {r: 788.92725, g: 523.27295, b: 382.58203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20114,6 +20114,7 @@ MonoBehaviour:
   requiredPickupTag: Key
   cooldownSeconds: 1
   isClosed: 1
+  doorAnimation: {fileID: 0}
 --- !u!114 &487221042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28791,6 +28792,7 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  doorAnimation: {fileID: 0}
 --- !u!1001 &770098997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28798,6 +28800,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 761650084333571562, guid: 521bfca230778254982e4c681b49d92c,
+        type: 3}
+      propertyPath: doorAnimation
+      value: 
+      objectReference: {fileID: 1376870996}
     - target: {fileID: 1127928152426471916, guid: 521bfca230778254982e4c681b49d92c,
         type: 3}
       propertyPath: m_RootOrder
@@ -29288,6 +29295,7 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  doorAnimation: {fileID: 0}
 --- !u!114 &781122694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29807,6 +29815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2055620300, guid: 1120bd3568808b8458c5bd69ff54dfdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3886467197706661818, guid: 1120bd3568808b8458c5bd69ff54dfdc,
         type: 3}
       propertyPath: m_RootOrder
@@ -39673,6 +39685,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 311.08887, y: 306.9952, z: 282.1198}
   m_Center: {x: -524.12616, y: 103.49769, z: 245.38069}
+--- !u!1 &1312088084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5711052370896006010, guid: cce5ab3a9b6751843a58cad5ec7826e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 853996140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1312088088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312088084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7513297493162946847, guid: cce5ab3a9b6751843a58cad5ec7826e1, type: 3}
 --- !u!1 &1312212062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8532899743805242226, guid: 388bf1ce48e227b4bb840e9027584d98,
@@ -39723,6 +39755,7 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 0
+  doorAnimation: {fileID: 0}
 --- !u!1 &1320170144
 GameObject:
   m_ObjectHideFlags: 0
@@ -40612,6 +40645,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374061546}
   m_Mesh: {fileID: -7087271138916236341, guid: 06185648f1174334b874a5ce319aa025, type: 3}
+--- !u!114 &1376870996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 761650084333571563, guid: 521bfca230778254982e4c681b49d92c,
+    type: 3}
+  m_PrefabInstance: {fileID: 770098997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770098999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b2c946fd3ecf942bde65e3941a2032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1382617109
 GameObject:
   m_ObjectHideFlags: 0
@@ -41495,25 +41540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454004607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1459833420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3882389056425190030, guid: 50422bdb9c4124f4493a227ce47ac20d,
-    type: 3}
-  m_PrefabInstance: {fileID: 3882389055388023676}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1459833431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459833420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742afa913ee8d05458744d772aa05a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransform: {fileID: 888455694}
 --- !u!1 &1464174343
 GameObject:
   m_ObjectHideFlags: 0
@@ -49968,6 +49994,7 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  doorAnimation: {fileID: 0}
 --- !u!1 &1817072204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3332788904514746529, guid: 2b319dd44e399b441b795fcecd5afa7e,
@@ -50031,6 +50058,7 @@ MonoBehaviour:
   requiredPickupTag: Key
   cooldownSeconds: 1
   isClosed: 1
+  doorAnimation: {fileID: 0}
 --- !u!64 &1817072211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73187,6 +73215,7 @@ MonoBehaviour:
   requiredPickupTag: 
   cooldownSeconds: 1
   isClosed: 1
+  doorAnimation: {fileID: 0}
 --- !u!1001 &2117909436
 PrefabInstance:
   m_ObjectHideFlags: 0
