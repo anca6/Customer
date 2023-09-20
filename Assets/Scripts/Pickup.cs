@@ -8,6 +8,7 @@ public class Pickup : MonoBehaviour
     public KeyCode ActivationKey = KeyCode.E; // activation key set to "E"
 
     public string pickupTag;
+    public GameObject IO; //interactionObject
 
 
     private void Update()
@@ -30,6 +31,12 @@ public class Pickup : MonoBehaviour
                 interactedWith = true; // interacted is set to true
 
                 Debug.Log(pickupTag + " grabbed"); // writes in the console which object was picked up
+            if (IO != null)
+            {
+                Debug.LogWarning("no interaction object");
+                    return;
+            }
+            Destroy(IO);
             
             //}
 
