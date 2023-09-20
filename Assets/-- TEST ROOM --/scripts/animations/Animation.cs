@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-    public Animator Animator;
+    public Animator Animator; // animator instance to reference
 
     // Method to open the door
     public void Open()
