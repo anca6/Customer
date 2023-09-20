@@ -14,6 +14,8 @@ public class Interaction : MonoBehaviour
     public int scoreChange = 1; // score value 
     //public bool increaseScore = true; 
 
+    public GameObject IO; //InteractionObject
+
     void Start()
     {
         playerControls = FindObjectOfType<PlayerControls>(); // finds player control component and sets it to this variable
@@ -32,7 +34,13 @@ public class Interaction : MonoBehaviour
                 //TO DO: deactivate glowy mesh?
                 isInteracted = true; // so the player can only interact with it once
                 ScoreManager.Instance.ChangeScore(scoreChange); // adds value to the big score variable
-                
+
+                if (IO != null)
+                {
+                    Debug.LogWarning("no interaction object");
+                    return;
+                }
+                Destroy(IO);
             }
 
         /*//WINDOW
