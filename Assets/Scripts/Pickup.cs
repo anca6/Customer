@@ -9,8 +9,6 @@ public class Pickup : MonoBehaviour
 
     public string pickupTag;
 
-    public GameObject InteractionIndicator;
-
    /* public string keyTag = "Key"; //Tag for the key item
     public string extinguisherTag = "Extinguisher"; //Tag for the extinguisher item*/
 
@@ -19,14 +17,6 @@ public class Pickup : MonoBehaviour
         if (interactedWith)
         {
             Destroy(gameObject);
-
-            //destroys indicator
-            if (InteractionIndicator != null)
-            {
-                Debug.LogWarning("OBJECT HAS NO INTERACTION INDICATOR ASSIGHNED ");
-                return; 
-            }
-            Destroy(InteractionIndicator);
         }
     }
 

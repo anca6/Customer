@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 789.4238, g: 523.688, b: 382.77783, a: 1}
+  m_IndirectSpecularColor: {r: 789.1333, g: 523.40674, b: 382.5879, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19670,7 +19670,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   pickupTag: Key
-  InteractionIndicator: {fileID: 8177848939989650414}
 --- !u!1 &418018799
 GameObject:
   m_ObjectHideFlags: 0
@@ -21281,7 +21280,6 @@ MonoBehaviour:
   requiredPickupTag: Extinguisher
   scoreChange: 1
   increaseScore: 1
-  InteractionIndicator: {fileID: 0}
 --- !u!1 &555331355
 GameObject:
   m_ObjectHideFlags: 0
@@ -29685,7 +29683,6 @@ MonoBehaviour:
   requiredPickupTag: 
   scoreChange: 1
   increaseScore: 1
-  InteractionIndicator: {fileID: 0}
 --- !u!65 &781122689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29715,7 +29712,6 @@ MonoBehaviour:
   animators:
   - {fileID: 157279679}
   - {fileID: 1768047477}
-  InteractionIndicator: {fileID: 8177848940039181635}
   scoreChange: 1
 --- !u!1 &785897712
 GameObject:
@@ -30408,7 +30404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationKey: 101
   pickupTag: Extinguisher
-  InteractionIndicator: {fileID: 0}
 --- !u!1 &847200783
 GameObject:
   m_ObjectHideFlags: 0
@@ -31672,7 +31667,6 @@ MonoBehaviour:
   requiredPickupTag: Extinguisher
   scoreChange: 1
   increaseScore: 1
-  InteractionIndicator: {fileID: 0}
 --- !u!1 &948240749
 GameObject:
   m_ObjectHideFlags: 0
@@ -51132,7 +51126,6 @@ MonoBehaviour:
   requiredPickupTag: 
   scoreChange: 1
   increaseScore: 1
-  InteractionIndicator: {fileID: 8177848939666968680}
 --- !u!1 &1834440002
 GameObject:
   m_ObjectHideFlags: 0
@@ -74136,7 +74129,6 @@ MonoBehaviour:
   requiredPickupTag: 
   scoreChange: 1
   increaseScore: 1
-  InteractionIndicator: {fileID: 0}
 --- !u!114 &2102726472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77354,7 +77346,6 @@ MonoBehaviour:
   requiredPickupTag: 
   scoreChange: 1
   increaseScore: 1
-  InteractionIndicator: {fileID: 0}
 --- !u!33 &6047566830727702464
 MeshFilter:
   m_ObjectHideFlags: 0

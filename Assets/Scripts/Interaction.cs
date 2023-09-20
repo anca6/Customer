@@ -13,7 +13,6 @@ public class Interaction : MonoBehaviour
 
     public int scoreChange = 1;
     public bool increaseScore = true;
-    public GameObject InteractionIndicator;
 
     void Start()
     {
@@ -31,14 +30,6 @@ public class Interaction : MonoBehaviour
                 Debug.Log("test alarm");
                 //TO DO: add audio effect
                 //TO DO: deactivate glowy mesh?
-                //destroys indicator
-                if (InteractionIndicator != null)
-                {
-                    Debug.LogWarning("OBJECT HAS NO INTERACTION INDICATOR ASSIGHNED ");
-                    return;
-                }
-                Destroy(InteractionIndicator);
-
                 isInteracted = true;
                 ScoreManager.Instance.ChangeScore(scoreChange);
                 
