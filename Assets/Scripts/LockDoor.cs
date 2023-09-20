@@ -18,10 +18,12 @@ public class LockDoor : MonoBehaviour
 
     public Animation doorAnimation;
 
-    bool closeScore = false;
-    bool lockScore = false;
-
     public int scoreChange = 1;
+
+    bool openScore;
+    bool closeScore;
+    bool lockScore;
+    bool unlockScore;
 
 
     private void OnCollisionStay(Collision collision)
@@ -41,6 +43,9 @@ public class LockDoor : MonoBehaviour
 
                         //trigger open animation
                         doorAnimation.Open();
+                        openScore = true;
+
+                        //ScoreManager.Instance.GetScore();
 
                     }
                     else if (!isClosed)
@@ -50,6 +55,7 @@ public class LockDoor : MonoBehaviour
 
                         //trigger close animation
                         doorAnimation.Close();
+                        closeScore = true;
                         ScoreManager.Instance.ChangeScore(scoreChange);
 
                     }
@@ -71,12 +77,12 @@ public class LockDoor : MonoBehaviour
                             isLocked = true;
                             Debug.Log("Locked!");
                             lockScore = true;
-                            ScoreManager.Instance.ChangeScore(-scoreChange);
                         }
                         else if (isClosed && isLocked && playerInventory.inventory.Contains(requiredPickupTag))
                         {
                             isLocked = false;
                             Debug.Log("Unlocked!");
+                            unlockScore = true;
                         }
                         nextActionTime = Time.time + cooldownSeconds;
                     }
@@ -86,6 +92,14 @@ public class LockDoor : MonoBehaviour
                     }
                 }
             }
+            if(closeScore && unlockScore)
+            {
+                ScoreManager.Instance.ChangeScore(scoreChange);
+            }
+            /*else if(openScore)
+            {
+                ScoreManager.Instance.ChangeScore(-scoreChange);
+            }*/
         }
         ScoreManager.Instance.GetScore();
         buttonPressed = false;
