@@ -12,7 +12,9 @@ public class LockDoor : MonoBehaviour
     public float cooldownSeconds = 1; // cooldown so we dont spam keys
 
     public bool isClosed = true; 
-    bool isLocked = false;
+    public bool isLocked = false;
+
+    int lastScore = 0;
 
     float nextActionTime; // for the cooldown
 
@@ -20,13 +22,25 @@ public class LockDoor : MonoBehaviour
 
     public int scoreChange = 1; // score value that changes score
 
-    // reward system checks
-    bool openScore;
-    bool closeScore;
-    bool lockScore;
-    bool unlockScore;
     public GameObject Audio;
 
+    private void Start()
+    {
+        CheckScore();
+    }
+
+    void CheckScore()
+    {
+        Debug.Log("Door: Checking whether score should change");
+        int correctScore = (isClosed && !isLocked) ? 1 : 0;
+        if (correctScore!=lastScore)
+        {
+            ScoreManager.Instance.ChangeScore(correctScore - lastScore);
+            Debug.Log("Updating score for door: " + (correctScore - lastScore));
+            Debug.Log("Score is now: " + ScoreManager.Instance.GetScore());
+            lastScore = correctScore;
+        }
+    }
 
     private void OnCollisionStay(Collision collision)
     {
@@ -45,7 +59,7 @@ public class LockDoor : MonoBehaviour
 
                         //trigger open animation
                         doorAnimation.Open();
-                        openScore = true; // for reward system
+                        //openScore = true; // for reward system
 
                         if (Audio == null)
 
@@ -54,6 +68,7 @@ public class LockDoor : MonoBehaviour
                             return;
                         }
                         Audio.SetActive(true);
+                        CheckScore();
                     }
 
                     else if (!isClosed)
@@ -63,8 +78,9 @@ public class LockDoor : MonoBehaviour
 
                         //trigger close animation
                         doorAnimation.Close();
-                        closeScore = true;
+                        //closeScore = true;
                         //ScoreManager.Instance.ChangeScore(scoreChange);
+                        CheckScore();
 
                     }
                     nextActionTime = Time.time + cooldownSeconds; // sets the time the player can acivate anything with the keys
@@ -73,16 +89,7 @@ public class LockDoor : MonoBehaviour
                 {
                     //Debug.Log("DENIED!");
                 }
-
-                //IN PROGRESS
-                if (closeScore && unlockScore)
-                {
-                    ScoreManager.Instance.ChangeScore(scoreChange);
-                }
-                /*else if (openScore)
-                {
-                    ScoreManager.Instance.ChangeScore(-scoreChange);
-                }*/
+                
             }
             if (playerInventory != null) // if the player has picked up objects in the inventory
             {
@@ -94,13 +101,15 @@ public class LockDoor : MonoBehaviour
                         {
                             isLocked = true; // door is locked
                             Debug.Log("Locked!");
-                            lockScore = true; // for reward system
+                            //lockScore = true; // for reward system
+                            CheckScore();
                         }
                         else if (isClosed && isLocked && playerInventory.inventory.Contains(requiredPickupTag)) // if the door is closed, locked and they have the key
                         {
                             isLocked = false; // door is unlocked
                             Debug.Log("Unlocked!");
-                            unlockScore = true; // for reward system
+                            //unlockScore = true; // for reward system
+                            CheckScore();
                         }
                         nextActionTime = Time.time + cooldownSeconds; // sets the time the player can acivate anything with the keys
                     }
@@ -110,7 +119,8 @@ public class LockDoor : MonoBehaviour
                     }
                 }
             }
-            /*if(closeScore && unlockScore)
+            /*
+            if(closeScore && unlockScore)
             {
                 ScoreManager.Instance.ChangeScore(scoreChange);
             }
