@@ -22,7 +22,7 @@ public class ElavatorOpen : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("collsion elavator");
-        if (collision.gameObject.CompareTag("Player") && Input.GetKey(ActivationKey)) // if the player collides with the object and presses the activation key at the same type
+        if (Input.GetKey(ActivationKey)) // if the player collides with the object and presses the activation key at the same type
         {
             open = true;
             Debug.Log("input detected");
