@@ -5,6 +5,8 @@ using UnityEngine;
 public class Good_Ending : MonoBehaviour
 {
     public GameObject Camera;
+    public GameObject Dissabled_Camera;
+    public GameObject Dissabled_Camera2;
     public GameObject Player;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,9 @@ public class Good_Ending : MonoBehaviour
     {
         Debug.Log("collsion");
         Camera.SetActive(true);
+        Dissabled_Camera.SetActive(false);
+        Dissabled_Camera2.SetActive(false);
+
 
 
       /*  if (gameObject.CompareTag("Player"))

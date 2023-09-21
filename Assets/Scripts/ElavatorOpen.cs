@@ -11,21 +11,26 @@ public class ElavatorOpen : MonoBehaviour
     void Start()
     {
          open = false;
+        Animator.SetBool("Open", open);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Animator.SetBool("Open", open);
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    
+    private void OnCollisionStay(Collision Player)
     {
         Debug.Log("collsion elavator");
-        if (Input.GetKey(ActivationKey)) // if the player collides with the object and presses the activation key at the same type
+        if (Input.GetKeyDown(ActivationKey)) // if the player collides with the object and presses the activation key at the same type
         {
             open = true;
             Debug.Log("input detected");
+            Animator.SetBool("Open", open);
         }
     }
+    
 }
