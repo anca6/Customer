@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     public KeyCode ActivationKey = KeyCode.E; // activation key for interaction
-    bool isInteracted = false; // checks if object has been interacted with
+    public bool isInteracted = false; // checks if object has been interacted with
 
     private PlayerControls playerControls; // creates object that references the player movement script
 
@@ -22,7 +22,7 @@ public class Interaction : MonoBehaviour
         playerControls = FindObjectOfType<PlayerControls>(); // finds player control component and sets it to this variable
     }
 
-    private void OnCollisionStay(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
         PlayerInventory playerInventory = collision.gameObject.GetComponent<PlayerInventory>(); // creates instance of the player inventory to reference in this script
 

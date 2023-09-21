@@ -30,6 +30,7 @@ public class OpenWindows : MonoBehaviour
                 foreach (Animator anim in animators) // for all stages in the animation
                 {
                     anim.SetBool(boolTriggerName, !currentState); // toggle all
+
                 }
 
                 if(currentState == true) // if the window is left open

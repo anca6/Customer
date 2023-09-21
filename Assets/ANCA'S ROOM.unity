@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 789.5283, g: 523.7383, b: 382.81396, a: 1}
+  m_IndirectSpecularColor: {r: 788.85156, g: 523.23535, b: 382.55664, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26878,6 +26878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: 
   scoreChange: 1
   IO: {fileID: 0}
@@ -26915,6 +26916,51 @@ Transform:
   m_Father: {fileID: 543450652547174214}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &528487844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528487845}
+  - component: {fileID: 528487846}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Key_UI
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528487845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528487844}
+  m_LocalRotation: {x: 0.0043260157, y: -0.8980973, z: -0.0064685615, w: 0.4397282}
+  m_LocalPosition: {x: -0.316042, y: 0.00028706834, z: -0.47314215}
+  m_LocalScale: {x: 0.14931324, y: 0.1493133, z: 0.18549368}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1832190751}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &528487846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528487844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &534509631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27651,6 +27697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: Extinguisher
   scoreChange: 1
   IO: {fileID: 0}
@@ -37168,6 +37215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 130a4ef2ba3bec246bb77650c3ab8479,
         type: 3}
+      propertyPath: m_TagString
+      value: Window
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 130a4ef2ba3bec246bb77650c3ab8479,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -37304,6 +37356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: 
   scoreChange: 1
   IO: {fileID: 0}
@@ -39686,6 +39739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: Extinguisher
   scoreChange: 1
   IO: {fileID: 0}
@@ -47340,6 +47394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: Extinguisher
   scoreChange: 1
   IO: {fileID: 0}
@@ -63594,7 +63649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1607624806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65863,7 +65918,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 1727
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 180, w: 0}
+  m_BoundingSphereOverride: {x: 6.7e-43, y: 7.1e-44, z: 0, w: -9.834883e+32}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -66519,6 +66574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: 
   scoreChange: 1
   IO: {fileID: 8177848939666968680}
@@ -90746,6 +90802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: 
   scoreChange: 1
   IO: {fileID: 0}
@@ -91128,7 +91185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactE: {fileID: 1999607720}
   interactX: {fileID: 1497173476}
-  requiredTag: 
   pickup: {fileID: 406530498}
 --- !u!114 &2119854578
 MonoBehaviour:
@@ -95807,6 +95863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationKey: 101
+  isInteracted: 0
   requiredPickupTag: 
   scoreChange: 1
   IO: {fileID: 0}
