@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -8,6 +9,8 @@ public class Pickup : MonoBehaviour
     public KeyCode ActivationKey = KeyCode.E; // activation key set to "E"
 
     public string pickupTag;
+    public GameObject IO; //interactionObject
+    public GameObject Audio;
 
 
     private void Update()
@@ -30,6 +33,28 @@ public class Pickup : MonoBehaviour
                 interactedWith = true; // interacted is set to true
 
                 Debug.Log(pickupTag + " grabbed"); // writes in the console which object was picked up
+            if (IO == null)
+         
+            {
+                Debug.LogWarning("no interaction object");
+                    return;
+            }
+
+            if (Audio == null)
+
+            {
+                Debug.LogWarning("no interaction audio");
+                return;
+            }
+            Audio.SetActive(true);
+            /* if (Audio = null)
+
+             {
+                 Debug.LogWarning("no interaction audio");
+                 return;
+             }
+             Audio.SetActive(true); */
+            Destroy(IO);
             
             //}
 

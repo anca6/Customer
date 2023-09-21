@@ -9,6 +9,9 @@ public class OpenWindows : MonoBehaviour
 
     public int scoreChange = 1; // for reward system
 
+    public GameObject IO; //InteractionObject
+    public GameObject Audio;
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player")) // if the player collides with the window
@@ -32,12 +35,28 @@ public class OpenWindows : MonoBehaviour
                 if(currentState == true) // if the window is left open
                 {
                     ScoreManager.Instance.ChangeScore(-scoreChange); // score: -1
+
                 }
 
                 else if(currentState == false) // if the window is left closed
                 {
                     ScoreManager.Instance.ChangeScore(scoreChange); // score: +1
                 }
+                if (Audio == null)
+
+                {
+                    Debug.LogWarning("no interaction audio");
+                    return;
+                }
+                Audio.SetActive(true);
+
+                if (IO == null)
+                {
+                    Debug.LogWarning("no interaction object");
+                    return;
+                }
+            
+                Destroy(IO);
             }
             ScoreManager.Instance.GetScore(); // gets the final score
         }
