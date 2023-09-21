@@ -7,11 +7,13 @@ public class ElavatorOpen : MonoBehaviour
     bool open;
     public KeyCode ActivationKey = KeyCode.E;
     public Animator Animator;
+    public GameObject ElavatorSound;
     // Start is called before the first frame update
     void Start()
     {
          open = false;
         Animator.SetBool("Open", open);
+        ElavatorSound.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class ElavatorOpen : MonoBehaviour
             open = true;
             Debug.Log("input detected");
             Animator.SetBool("Open", open);
+            ElavatorSound.SetActive(true);
         }
     }
     
