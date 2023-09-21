@@ -13,7 +13,7 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,9 +22,14 @@ public class PlayerControls : MonoBehaviour
         float horizontalinput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontalinput, 0f, verticalInput);
+        Vector3 movement = new Vector3(-horizontalinput, 0f, -verticalInput);
         rb.velocity = movement * moveSpeed * Mathf.Clamp((1 - carrying / maxCarryAmount), 0, 1);
 
+        if (movement.magnitude > 0)
+        {
+            var Target = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0.0f, Target, 0.0f);
+        }
     }
 
     public void AddCarry(float kgs)

@@ -31,8 +31,7 @@ public class Interaction : MonoBehaviour
             if (isInteracted == false && Input.GetKey(ActivationKey)) // if the player interacts with the fire alarm
             {
                 Debug.Log("test alarm");
-                //TO DO: add audio effect
-                //TO DO: deactivate glowy mesh?
+
                 isInteracted = true; // so the player can only interact with it once
                 ScoreManager.Instance.ChangeScore(scoreChange); // adds value to the big score variable
 
@@ -51,15 +50,6 @@ public class Interaction : MonoBehaviour
                 Destroy(IO);
             }
 
-        /*//WINDOW
-        if (gameObject.CompareTag("Window"))
-            if (isInteracted == false && Input.GetKey(ActivationKey)) // if the player interacts with the window
-            {
-                Debug.Log("test window");
-                //TO DO: add audio effect
-                //TO DO: add animation
-                isInteracted = true; // so the player can only interact with it once
-            }*/
 
         //PERSONAL BELONGINGS
         if (gameObject.CompareTag("Belonging"))

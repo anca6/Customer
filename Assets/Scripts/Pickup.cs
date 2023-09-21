@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class Pickup : MonoBehaviour
 {
-    private bool interactedWith = false; // bool to set if a pickup has been interacted with or not
+    public bool interactedWith = false; // bool to set if a pickup has been interacted with or not
     public KeyCode ActivationKey = KeyCode.E; // activation key set to "E"
 
     public string pickupTag;
@@ -18,8 +19,14 @@ public class Pickup : MonoBehaviour
         if (interactedWith)
         {
             Destroy(gameObject); // if a pickup object has been interacted with, it gets destroyed
+
+            /*On_And_Off.SetActive(active);
+            Animator.SetBool("Open", open);
+            Animator.SetBool("Use", use);*/
         }
     }
+
+   
 
     private void OnCollisionStay(Collision collision)
     {
@@ -31,7 +38,7 @@ public class Pickup : MonoBehaviour
                 playerInventory.AddToInventory(pickupTag); // adds the pickup in the player inventory and stores it there
             
                 interactedWith = true; // interacted is set to true
-
+                
                 Debug.Log(pickupTag + " grabbed"); // writes in the console which object was picked up
             if (IO == null)
          
