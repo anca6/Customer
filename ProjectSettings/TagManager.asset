@@ -14,6 +14,7 @@ TagManager:
   - Obstacle
   - OfficeTrigger
   - HallwayTrigger
+  - Key_UI
   layers:
   - Default
   - TransparentFX
