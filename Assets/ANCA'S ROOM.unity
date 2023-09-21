@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 789.15674, g: 523.41455, b: 382.58984, a: 1}
+  m_IndirectSpecularColor: {r: 788.97266, g: 523.4912, b: 382.69775, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26603,8 +26603,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 304.81976, y: 139.98724, z: 99.999985}
-  m_Center: {x: -102.4129, y: -19.993607, z: 0.000068855305}
+  m_Size: {x: 1987.8678, y: 139.98724, z: 99.999985}
+  m_Center: {x: 739.11304, y: -19.993608, z: 0.00009245819}
 --- !u!114 &517945269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45730,7 +45730,6 @@ GameObject:
   - component: {fileID: 1112676853}
   - component: {fileID: 1112676852}
   - component: {fileID: 1112676851}
-  - component: {fileID: 1112676855}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -45929,18 +45928,6 @@ Transform:
   m_Father: {fileID: 247254901}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 29.38, y: 59.403, z: 0.359}
---- !u!114 &1112676855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112676850}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e01d6c50ec2442b76004bfd2734b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1124024619
 GameObject:
   m_ObjectHideFlags: 0
