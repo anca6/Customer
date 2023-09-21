@@ -47,6 +47,9 @@ public class HydrantPickup : MonoBehaviour
             */
             }
         }
+        On_And_Off.SetActive(active);
+        Animator.SetBool("Open", open);
+        Animator.SetBool("Use", use);
     }
 
     private void OnCollisionStay(Collision collision)
