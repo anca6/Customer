@@ -14,8 +14,8 @@ public class Interaction : MonoBehaviour
     public int scoreChange = 1; // score value 
     //public bool increaseScore = true; 
 
-    public GameObject IO; //InteractionObject
-    public GameObject Audio;
+    //public GameObject IO; //InteractionObject
+    //public GameObject Audio;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class Interaction : MonoBehaviour
                 isInteracted = true; // so the player can only interact with it once
                 ScoreManager.Instance.ChangeScore(scoreChange); // adds value to the big score variable
 
-                if (IO == null)
+                /*if (IO == null)
                 {
                     Debug.LogWarning("no interaction object");
                     return;
@@ -48,7 +48,7 @@ public class Interaction : MonoBehaviour
                     return;
                 }
                 Audio.SetActive(true);
-                Destroy(IO);
+                Destroy(IO);*/
             }
 
         /*//WINDOW
