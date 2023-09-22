@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Window
+  - Belonging
+  - Alarm
+  - Win
+  - Lose
+  - Key
+  - Extinguisher
+  - Obstacle
+  - OfficeTrigger
+  - HallwayTrigger
+  - Key_UI
+  - Door
   layers:
   - Default
   - TransparentFX
