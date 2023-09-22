@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
-  - enabled: 1
     path: Assets/Fernando's stuff/Menu.unity
     guid: 8a91c4147d882c644bd27638b9360cb3
   - enabled: 1
@@ -17,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ANCA'S ROOM.unity
     guid: ea9fe81155531f0418abc16c27a477d6
-  - enabled: 1
-    path: Assets/Fernando's stuff/Reward.unity
-    guid: cf4adc3d2e3ecef43b215e8ade58c459
   m_configObjects: {}
