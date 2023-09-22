@@ -19,7 +19,7 @@ public class Move_Level : MonoBehaviour
     void Update()
     {
         
-        if (movingVariable >= -500)
+        if (movingVariable >= -1000)
         {
 
             MoveLeft();
@@ -51,7 +51,7 @@ public class Move_Level : MonoBehaviour
     public void MoveLeft()
     {
 
-        movingVariable = movingVariable - 250;
+        movingVariable = movingVariable - 500;
         levels.anchoredPosition = new Vector2(movingVariable, 0);
 
     }
@@ -59,7 +59,7 @@ public class Move_Level : MonoBehaviour
     public void MoveRight()
     {
 
-        movingVariable = movingVariable + 250;
+        movingVariable = movingVariable + 500;
         levels.anchoredPosition = new Vector2(movingVariable, 0);
 
     }
