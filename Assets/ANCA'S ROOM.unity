@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 788.85156, g: 523.23535, b: 382.55664, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11124,7 +11124,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fb41ba65ef38d544d8e037ded36a5548,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.8673234
+      value: -5.418
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb41ba65ef38d544d8e037ded36a5548,
         type: 3}
@@ -11134,7 +11134,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fb41ba65ef38d544d8e037ded36a5548,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.670372
+      value: 22.112
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb41ba65ef38d544d8e037ded36a5548,
         type: 3}
@@ -26863,8 +26863,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1406.0675, y: 139.98724, z: 99.999985}
-  m_Center: {x: 448.2128, y: -19.993608, z: 0.000082641964}
+  m_Size: {x: 1511.3138, y: 139.98724, z: 99.999985}
+  m_Center: {x: 500.83676, y: -19.993608, z: 0.00008414079}
 --- !u!114 &517945269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36401,6 +36401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 22.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 600886837582848505, guid: 521bfca230778254982e4c681b49d92c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 600886837582848505, guid: 521bfca230778254982e4c681b49d92c,
         type: 3}
@@ -51021,6 +51026,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22b2c946fd3ecf942bde65e3941a2032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1376870998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 761650084333571562, guid: 521bfca230778254982e4c681b49d92c,
+    type: 3}
+  m_PrefabInstance: {fileID: 770098997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770098999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90132afa93caf547a24c6ab2a334434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1382617109
@@ -91186,6 +91203,8 @@ MonoBehaviour:
   interactE: {fileID: 1999607720}
   interactX: {fileID: 1497173476}
   pickup: {fileID: 406530498}
+  interactible: {fileID: 1832190754}
+  door: {fileID: 1376870998}
 --- !u!114 &2119854578
 MonoBehaviour:
   m_ObjectHideFlags: 0
