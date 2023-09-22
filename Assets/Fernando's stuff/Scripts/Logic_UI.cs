@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Logic_UI : MonoBehaviour
 {
-    
-  
-
     public void LoadLevel(string level)
     {
 
@@ -29,6 +26,14 @@ public class Logic_UI : MonoBehaviour
 
         Debug.Log("Jogo to load: " + menu);
         SceneManager.LoadScene(menu);
+
+    }
+
+    public void LoadReward(string reward)
+    {
+
+        Debug.Log("Jogo to load: " + reward);
+        SceneManager.LoadScene(reward);
 
     }
 

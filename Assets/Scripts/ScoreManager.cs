@@ -33,5 +33,11 @@ public class ScoreManager : MonoBehaviour
     {
         return playerScore;
     }
-   
+
+    public void SetScore(int scoreChange)
+    {
+        playerScore = scoreChange;
+        Debug.Log(playerScore);
+    }
+
 }

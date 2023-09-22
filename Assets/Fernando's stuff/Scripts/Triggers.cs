@@ -83,6 +83,12 @@ public class Triggers : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.CompareTag("Extinguisher"))
+        {
+            interactE.SetActive(true);
+
+        }
+
     }
 
     private void OnCollisionExit(Collision collision)
@@ -101,6 +107,12 @@ public class Triggers : MonoBehaviour
         {
             interactE.SetActive(false);
             interactX.SetActive(false);
+        }
+
+        if (collision.gameObject.CompareTag("Extinguisher"))
+        {
+            interactE.SetActive(false);
+
         }
     }
 
